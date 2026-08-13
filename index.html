@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Builder Pass — Hacker House Goa 2026</title>
+<meta name="description" content="Upload a photo, fill a few fields, and instantly mint your Hacker House Goa 2026 Builder Pass — boarding pass or rail pass. Download it and share on X. #FrameInGoa" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Builder Pass — Hacker House Goa 2026" />
+<meta property="og:description" content="Mint your Hacker House Goa 2026 Builder Pass. #FrameInGoa" />
+<meta property="og:image" content="og.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Builder Pass — Hacker House Goa 2026" />
+<meta name="twitter:description" content="Mint your Hacker House Goa 2026 Builder Pass. #FrameInGoa" />
+<meta name="twitter:image" content="og.png" />
+<meta name="theme-color" content="#0e4d2a" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2314663a'/%3E%3Ctext x='50' y='72' font-size='64' font-family='Georgia,serif' font-weight='900' text-anchor='middle' fill='%23f4c400'%3EH%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;700;800;900&family=Poppins:wght@500;600;700&family=Baloo+2:wght@700;800&family=Space+Mono:wght@400;700&family=Gloria+Hallelujah&display=swap" rel="stylesheet" />
+<style>
+:root{--green:#14663a;--green-deep:#0e4d2a;--green-dark:#0a3d21;--green-950:#06301a;--lime:#8fcb4e;--lime-soft:#a9d96f;--yellow:#f4c400;--yellow-deep:#e6b400;--magenta:#e6198d;--magenta-deep:#c50f76;--cream:#fdfbf0;--ink:#0a2b18;--teal:#2bb3a3;--shadow:0 20px 55px rgba(4,28,15,.42)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',system-ui,sans-serif;color:var(--cream);background:var(--green-deep);min-height:100vh;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+.bg{position:fixed;inset:0;z-index:-2;background:radial-gradient(130% 90% at 50% -10%,#1c7b46 0%,var(--green) 42%,var(--green-950) 100%)}
+.bg-grain{position:fixed;inset:0;z-index:-1;opacity:.05;pointer-events:none;background-image:radial-gradient(var(--cream) 1px,transparent 1px);background-size:22px 22px}
+.border-strip{height:38px;width:100%;background-repeat:repeat-x;background-size:auto 38px;background-position:center}
+.border-strip.tall{height:46px;background-size:auto 46px}
+header{position:relative;z-index:5}
+.topbar{display:flex;align-items:center;justify-content:center;padding:24px 16px 12px}
+.wordmark{display:flex;align-items:center;justify-content:center;line-height:.8;gap:0;position:relative}
+.wordmark .hh{font-family:'Bodoni Moda',serif;font-weight:700;color:var(--yellow);font-size:clamp(38px,9.4vw,78px);transform:scaleY(1.3);text-shadow:2px 3px 0 rgba(10,61,33,.5);white-space:nowrap}
+.goa{font-family:'Baloo 2',cursive;font-weight:800;color:var(--yellow);-webkit-text-stroke:5px var(--magenta);paint-order:stroke fill;font-size:clamp(22px,5vw,44px);position:absolute;left:50%;top:50%;transform:translate(-50%,-52%) rotate(-4deg);z-index:3;margin:0}
+.tagline{text-align:center;font-family:'Space Mono',monospace;font-size:clamp(11px,2.6vw,13.5px);letter-spacing:3px;text-transform:uppercase;color:var(--lime-soft);margin-top:6px}
+.tagline b{color:var(--yellow)}
+.hero{max-width:900px;margin:0 auto;padding:24px 20px 4px;text-align:center;position:relative;z-index:3}
+.hero .eyebrow{font-family:'Space Mono',monospace;letter-spacing:4px;text-transform:uppercase;color:var(--magenta);font-size:12px;font-weight:700}
+.hero h1{font-family:'Bodoni Moda',serif;font-weight:800;font-size:clamp(32px,6.8vw,58px);line-height:1.02;color:var(--cream);margin:8px 0 12px}
+.hero h1 .y{color:var(--yellow)}
+.hero p{max-width:620px;margin:0 auto;color:#e7f2e4;font-size:clamp(14px,2.6vw,16.5px);line-height:1.55;opacity:.92}
+.studio{max-width:1180px;margin:30px auto 0;padding:0 16px 60px}
+.panel{background:linear-gradient(180deg,#fffef8,#f5efdd);color:var(--ink);border-radius:28px;box-shadow:var(--shadow);border:4px solid var(--green-dark);overflow:hidden}
+.panel-head{background:var(--green);color:var(--cream);padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.panel-head h2{font-family:'Bodoni Moda',serif;font-size:24px;font-weight:800}
+.panel-head .step{font-family:'Space Mono',monospace;font-size:11.5px;letter-spacing:1px;color:var(--lime-soft);margin-top:2px}
+.toggle{display:flex;gap:8px;background:var(--green-dark);padding:6px;border-radius:999px}
+.toggle button{border:0;background:transparent;color:#cfe6cf;font-family:'Poppins';font-weight:700;font-size:13px;padding:9px 16px;border-radius:999px;cursor:pointer;transition:.18s;white-space:nowrap}
+.toggle button.active{background:var(--yellow);color:var(--green-dark);box-shadow:0 3px 0 var(--yellow-deep)}
+.grid{display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:0}
+@media(max-width:880px){.grid{grid-template-columns:1fr}}
+.controls{padding:26px 24px;display:flex;flex-direction:column;gap:15px;border-right:2px dashed #e2dabf}
+@media(max-width:880px){.controls{border-right:0;border-bottom:2px dashed #e2dabf}}
+.dropzone{border:3px dashed var(--green);border-radius:18px;background:#fff;padding:20px 18px;text-align:center;cursor:pointer;transition:.18s;position:relative}
+.dropzone:hover,.dropzone.drag{background:#f2fae9;border-color:var(--magenta)}
+.dropzone .ic{width:48px;height:48px;margin:0 auto 8px;display:grid;place-items:center;background:var(--green);border-radius:50%;color:var(--yellow)}
+.dropzone .ic svg{width:23px;height:23px}
+.dropzone h3{font-size:15px;font-weight:700;color:var(--green-dark);margin-bottom:3px}
+.dropzone p{font-size:12.5px;color:#6b7a67}
+.dropzone small{display:block;margin-top:6px;font-size:11px;color:#96a191}
+.check{display:flex;gap:10px;align-items:flex-start;background:#eef6e6;border:2px solid #cfe3bb;border-radius:12px;padding:11px 13px;cursor:pointer}
+.check input{margin-top:2px;width:18px;height:18px;accent-color:var(--magenta);flex:none}
+.check .t{font-size:13px;color:#3f5c47;line-height:1.45}
+.check .t b{color:var(--green-dark)}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#4a6a52}
+.field label .muted{text-transform:none;font-weight:500;color:#9aa591}
+.field input{font-family:'Poppins';font-size:15px;padding:11px 13px;border-radius:12px;border:2px solid #dcd6c0;background:#fff;color:var(--ink);transition:.15s;width:100%}
+.field input:focus{outline:0;border-color:var(--magenta);box-shadow:0 0 0 3px rgba(230,25,141,.12)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:440px){.row2{grid-template-columns:1fr}}
+.title-box{display:flex;align-items:center;gap:10px;background:#fff;border:2px solid #dcd6c0;border-radius:12px;padding:7px 10px}
+.title-box input.tt{flex:1;border:0;background:transparent;outline:0;font-family:'Poppins';font-weight:700;color:var(--magenta-deep);font-size:15px;padding-left:4px;width:100%;min-width:0}
+.title-box input.tt::placeholder{color:#c9b8c2}
+.title-box button{border:0;background:var(--green);color:var(--yellow);width:38px;height:38px;border-radius:10px;cursor:pointer;display:grid;place-items:center;flex:none;transition:.15s}
+.title-box button:hover{background:var(--magenta);color:#fff;transform:rotate(90deg)}
+.title-box button svg{width:18px;height:18px}
+.slider{display:flex;align-items:center;gap:12px}
+.slider label{font-size:12px;font-weight:700;color:#4a6a52;min-width:46px}
+.slider input[type=range]{flex:1;accent-color:var(--magenta)}
+.drag-note{font-size:11.5px;color:#7a8a76;text-align:center;font-family:'Space Mono',monospace;margin-top:-4px}
+.preview{padding:26px 24px;display:flex;flex-direction:column;align-items:center;gap:18px;background:radial-gradient(120% 80% at 50% 0%,rgba(20,102,58,.10),transparent 60%),repeating-linear-gradient(45deg,#efe9d2,#efe9d2 15px,#eae3c9 15px,#eae3c9 30px)}
+.stage{width:100%;max-width:560px;position:relative;touch-action:none}
+.stage canvas{width:100%;height:auto;display:block;filter:drop-shadow(0 22px 40px rgba(4,28,15,.4))}
+.stage.has-photo canvas{cursor:grab}
+.stage.has-photo canvas:active{cursor:grabbing}
+.stage .empty{width:100%;aspect-ratio:1500/946;border-radius:16px;display:grid;place-items:center;text-align:center;color:#93a08d;background:#e7e0c8;border:3px dashed #c9c0a2;padding:20px;font-size:14px;line-height:1.6}
+.photo-hint{position:absolute;left:50%;transform:translateX(-50%);bottom:10px;background:rgba(10,61,33,.82);color:var(--cream);font-family:'Space Mono',monospace;font-size:11px;padding:5px 12px;border-radius:999px;pointer-events:none;white-space:nowrap;opacity:0;transition:.2s}
+.stage.has-photo:hover .photo-hint{opacity:1}
+.actions{display:flex;gap:12px;width:100%;max-width:560px;flex-wrap:wrap}
+.share-hint{width:100%;max-width:560px;margin:10px 0 0;font-size:12px;line-height:1.65;color:#9fc0a0;text-align:center}
+.share-hint b{color:var(--cream)}
+.btn{flex:1;min-width:150px;border:0;border-radius:14px;padding:15px 18px;font-family:'Poppins';font-weight:700;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:9px;transition:.16s;white-space:nowrap}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn svg{width:19px;height:19px}
+.btn-dl{background:var(--green);color:var(--cream);box-shadow:0 5px 0 var(--green-dark)}
+.btn-dl:not(:disabled):hover{transform:translateY(-2px);box-shadow:0 7px 0 var(--green-dark)}
+.btn-x{background:#111;color:#fff;box-shadow:0 5px 0 #000}
+.btn-x:not(:disabled):hover{transform:translateY(-2px);box-shadow:0 7px 0 #000}
+.btn-dl:active,.btn-x:active{transform:translateY(2px);box-shadow:none}
+.how{max-width:1180px;margin:44px auto 0;padding:0 16px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:760px){.how{grid-template-columns:1fr 1fr}}
+.how .card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:20px 18px;text-align:center;backdrop-filter:blur(4px)}
+.how .n{font-family:'Bodoni Moda',serif;font-size:30px;font-weight:900;color:var(--yellow)}
+.how h4{font-size:15px;margin:6px 0 4px}
+.how p{font-size:12.5px;color:#cfe0cb;line-height:1.5}
+.how b{color:var(--yellow)}
+footer{margin-top:52px;position:relative;z-index:3}
+.foot-inner{max-width:1180px;margin:0 auto;padding:26px 20px 46px;text-align:center;color:#bcd3ba}
+.foot-inner .fx{font-family:'Space Mono',monospace;font-size:13px;letter-spacing:1px}
+.foot-inner .fx b{color:#fff}
+.foot-inner .fx a{color:var(--yellow);text-decoration:none;border-bottom:1px dotted var(--yellow)}
+.scion{display:inline-flex;flex-direction:column;align-items:center;gap:5px;margin-top:20px}
+.scion .logo{font-family:'Bodoni Moda',serif;font-weight:900;letter-spacing:8px;font-size:30px;color:var(--yellow);background:var(--green-dark);border:2px solid var(--lime);border-radius:14px;padding:9px 20px 9px 28px;box-shadow:0 6px 0 rgba(10,61,33,.6)}
+.scion .tag{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--lime-soft)}
+.builders{margin-top:14px;font-family:'Space Mono',monospace;font-size:12.5px;letter-spacing:.4px;color:#9fc0a0;line-height:1.7}
+.builders .lbl{display:block;font-size:10px;letter-spacing:2px;color:#79a07d;margin-bottom:2px}
+.builders b{color:var(--cream);font-weight:700}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(140px);background:var(--green-dark);color:var(--cream);border:2px solid var(--lime);border-radius:14px;padding:13px 20px;font-size:13.5px;font-weight:600;box-shadow:var(--shadow);z-index:99;transition:.35s cubic-bezier(.2,.9,.3,1.2);max-width:90vw;text-align:center}
+.toast.show{transform:translateX(-50%) translateY(0)}
+.toast b{color:var(--yellow)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+/* intro splash */
+#splash{position:fixed;inset:0;z-index:2000;background:transparent;animation:splashOut 4.2s linear forwards;cursor:pointer;overflow:hidden}
+#splash #wm{transform-box:view-box;transform-origin:380px 220px}
+@media(max-aspect-ratio:5/3){#splash #wm{transform:scale(.86)}}
+@media(max-aspect-ratio:1/1){#splash #wm{transform:scale(.66)}}
+@media(max-aspect-ratio:5/9){#splash #wm{transform:scale(.52)}}
+#splash .splash-art{position:absolute;inset:0;width:100%;height:100%;display:block}
+#splash .scap{position:absolute;left:0;right:0;bottom:22px;text-align:center;font-family:'Space Mono',monospace;letter-spacing:2px;font-size:12px;color:#8a6a2f;text-transform:uppercase;opacity:.85;z-index:2;text-shadow:0 1px 0 rgba(255,246,214,.6)}
+#splash .logoin{animation:flicker 3.4s steps(1,end) .2s infinite}
+#splash .tw{animation:tw 1.6s ease-in-out infinite}#splash .tw2{animation:tw 2s ease-in-out .6s infinite}
+@keyframes splashOut{0%,97%{opacity:1}100%{opacity:1;visibility:hidden}}
+@keyframes flicker{0%,14%,16%,21%,54%,58%,84%,89%,100%{opacity:1}15%,20%,56%,86%{opacity:.28}}
+@keyframes tw{0%,100%{opacity:.25}50%{opacity:1}}
+@media(prefers-reduced-motion:reduce){#splash{animation-delay:.6s}}
+</style>
+</head>
+<body>
+<div id="splash" role="status" aria-label="Loading">
+  <svg class="splash-art" viewBox="0 0 760 440" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="sand" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#ecd79a"/><stop offset="0.6" stop-color="#e4c983"/><stop offset="1" stop-color="#dabd73"/>
+      </linearGradient>
+      <linearGradient id="wetfilm" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#2f9a63" stop-opacity="0.75"/><stop offset="0.14" stop-color="#1c7b46" stop-opacity="0.93"/><stop offset="0.5" stop-color="#14663a" stop-opacity="0.98"/><stop offset="1" stop-color="#14663a" stop-opacity="0.99"/>
+      </linearGradient>
+      <pattern id="grains" width="27" height="27" patternUnits="userSpaceOnUse" patternTransform="rotate(9)">
+        <circle cx="4" cy="6" r="1.3" fill="#c39f52" opacity="0.5"/><circle cx="17" cy="15" r="1" fill="#f6e7b4" opacity="0.6"/><circle cx="10" cy="21" r="1.1" fill="#c9a95a" opacity="0.45"/><circle cx="23" cy="4" r="0.9" fill="#f2e0a8" opacity="0.5"/><circle cx="1" cy="17" r="0.8" fill="#bd9a4c" opacity="0.4"/>
+      </pattern>
+      <filter id="carve" x="-12%" y="-45%" width="124%" height="195%">
+        <feDropShadow dx="0" dy="-1.6" stdDeviation="0.4" flood-color="#fff6d4" flood-opacity="0.92"/>
+        <feDropShadow dx="0" dy="2.4" stdDeviation="0.8" flood-color="#7d5f2a" flood-opacity="0.55"/>
+      </filter>
+      <mask id="wash" maskUnits="userSpaceOnUse" x="0" y="0" width="760" height="440">
+        <rect x="0" y="0" width="760" height="440" fill="#fff"/>
+        <rect x="-60" y="486" width="880" height="700" fill="#000">
+          <animate attributeName="y" values="486;486;-48;-48" keyTimes="0;0.2;0.42;1" dur="4.2s" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.2 0.55 0.2 1;0 0 1 1"/>
+        </rect>
+      </mask>
+      <mask id="reveal" maskUnits="userSpaceOnUse" x="-60" y="0" width="880" height="440">
+        <rect x="-60" y="0" width="880" height="440" fill="#fff"/>
+        <rect x="-60" y="0" width="880" height="0" fill="#000">
+          <animate attributeName="height" values="0;0;0;488;488" keyTimes="0;0.48;0.52;0.96;1" dur="4.2s" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0 0 1 1;0.4 0 0.45 1;0 0 1 1"/>
+        </rect>
+      </mask>
+    </defs>
+
+    <g mask="url(#reveal)">
+    <!-- sandy beach floor (top view) -->
+    <rect x="0" y="0" width="760" height="440" fill="url(#sand)"/>
+    <rect x="0" y="0" width="760" height="440" fill="url(#grains)"/>
+    <rect x="0" y="360" width="760" height="80" fill="#c6a95f" opacity="0.3"/>
+    <path d="M-20,358 Q380,344 780,358" fill="none" stroke="#cdb063" stroke-width="2" opacity="0.45"/>
+    <path d="M-20,396 Q380,384 780,396" fill="none" stroke="#cdb063" stroke-width="1.6" opacity="0.32"/>
+
+    <!-- footprint trail pressed into the sand -->
+    <g filter="url(#carve)" fill="#c3a154" opacity="0.62">
+      <g transform="translate(98,424) rotate(-16)"><ellipse rx="4.6" ry="8"/><circle cx="-2.4" cy="-9" r="1.2"/><circle cx="0.6" cy="-10" r="1.2"/><circle cx="3.4" cy="-8.4" r="1.1"/></g>
+      <g transform="translate(120,400) rotate(-16)"><ellipse rx="4.6" ry="8"/><circle cx="-2.4" cy="-9" r="1.2"/><circle cx="0.6" cy="-10" r="1.2"/><circle cx="3.4" cy="-8.4" r="1.1"/></g>
+      <g transform="translate(104,374) rotate(-16)"><ellipse rx="4.6" ry="8"/><circle cx="-2.4" cy="-9" r="1.2"/><circle cx="0.6" cy="-10" r="1.2"/><circle cx="3.4" cy="-8.4" r="1.1"/></g>
+      <g transform="translate(126,350) rotate(-16)"><ellipse rx="4.6" ry="8"/><circle cx="-2.4" cy="-9" r="1.2"/><circle cx="0.6" cy="-10" r="1.2"/><circle cx="3.4" cy="-8.4" r="1.1"/></g>
+      <g transform="translate(110,324) rotate(-16)"><ellipse rx="4.6" ry="8"/><circle cx="-2.4" cy="-9" r="1.2"/><circle cx="0.6" cy="-10" r="1.2"/><circle cx="3.4" cy="-8.4" r="1.1"/></g>
+    </g>
+
+    <!-- shells, starfish & pebbles on the sand -->
+    <g stroke="#0a3d21" stroke-opacity="0.22" stroke-width="1">
+      <g transform="translate(96,394) rotate(12)" fill="#dd7fae"><path d="M0,-11 L3,-3 11,-3 5,2 7,10 0,5 -7,10 -5,2 -11,-3 -3,-3 Z"/><circle cx="0" cy="0" r="2" fill="#c85f93" stroke="none"/></g>
+      <g transform="translate(650,166) rotate(-22) scale(1.12)" fill="#e6a54a"><path d="M0,-11 L3,-3 11,-3 5,2 7,10 0,5 -7,10 -5,2 -11,-3 -3,-3 Z"/><circle cx="0" cy="0" r="2" fill="#cf8a2e" stroke="none"/></g>
+      <g transform="translate(126,150) rotate(30) scale(0.8)" fill="#d98cae"><path d="M0,-11 L3,-3 11,-3 5,2 7,10 0,5 -7,10 -5,2 -11,-3 -3,-3 Z"/><circle cx="0" cy="0" r="2" fill="#c85f93" stroke="none"/></g>
+      <g transform="translate(700,398)" fill="#f3ead0"><path d="M0,0 Q-11,-2 -9,-11 Q-2,-15 3,-9 Q6,-3 0,0Z"/><g stroke="#d8caa6" stroke-opacity="0.8" fill="none" stroke-width="1"><path d="M-1,-1 Q-7,-3 -6,-9"/><path d="M-1,-1 Q-3,-6 1,-9"/></g></g>
+      <g transform="translate(70,300) rotate(-10)" fill="#efe3c6"><path d="M0,0 Q-10,-3 -8,-11 Q0,-16 8,-11 Q10,-3 0,0Z"/><g stroke="#d5c6a0" stroke-opacity="0.8" fill="none" stroke-width="0.9"><path d="M0,-1 L-5,-10"/><path d="M0,-1 L0,-13"/><path d="M0,-1 L5,-10"/></g></g>
+      <g transform="translate(566,406) rotate(16)" fill="#f2ead2"><path d="M0,0 Q-9,-2 -8,-10 Q0,-14 8,-10 Q9,-2 0,0Z"/><g stroke="#d5c6a0" stroke-opacity="0.8" fill="none" stroke-width="0.9"><path d="M0,-1 L-4,-9"/><path d="M0,-1 L4,-9"/></g></g>
+      <g transform="translate(330,414) rotate(-8)" fill="#f5eed6"><path d="M0,0 Q-8,-2 -7,-9 Q0,-13 7,-9 Q8,-2 0,0Z"/></g>
+      <ellipse cx="672" cy="98" rx="9" ry="6" fill="#cfc6ad" transform="rotate(-18 672 98)"/>
+      <ellipse cx="646" cy="404" rx="7" ry="5" fill="#c6bca2" transform="rotate(24 646 404)"/>
+      <ellipse cx="250" cy="398" rx="6" ry="4.4" fill="#cabfa2"/>
+      <ellipse cx="418" cy="120" rx="6.5" ry="4.6" fill="#cbc0a3" transform="rotate(14 418 120)"/>
+    </g>
+
+    <!-- HACKER गोवा HOUSE written into the sand (erased by the waterline) -->
+    <g id="sandtext" mask="url(#wash)">
+      <text id="scion" opacity="0" x="30" y="74" text-anchor="start" font-family="'Gloria Hallelujah',cursive" font-size="32" fill="#b6935a" filter="url(#carve)" transform="rotate(-8 30 74)">Scion</text>
+      <g id="wm">
+      <g filter="url(#carve)" fill="#c3a35f" font-family="'Bodoni Moda',serif" font-weight="700" text-anchor="middle">
+        <text x="380" y="210" font-size="112" textLength="306" lengthAdjust="spacingAndGlyphs">HACKER</text>
+        <text x="380" y="306" font-size="112" textLength="306" lengthAdjust="spacingAndGlyphs">HOUSE</text>
+      </g>
+      <text x="380" y="242" text-anchor="middle" font-family="'Baloo 2',cursive" font-weight="800" font-size="64" fill="#e9c24c" stroke="#e6198d" stroke-width="7.5" stroke-linejoin="round" paint-order="stroke" filter="url(#carve)" transform="rotate(-3 380 234)">गोवा</text>
+      <g stroke="none">
+        <g fill="#b89a52" opacity="0.5"><circle cx="186" cy="116" r="1.6"/><circle cx="242" cy="110" r="1.3"/><circle cx="300" cy="115" r="1.7"/><circle cx="362" cy="110" r="1.4"/><circle cx="430" cy="113" r="1.6"/><circle cx="500" cy="110" r="1.3"/><circle cx="560" cy="117" r="1.6"/><circle cx="202" cy="169" r="1.5"/><circle cx="272" cy="171" r="1.4"/><circle cx="342" cy="169" r="1.7"/><circle cx="412" cy="171" r="1.4"/><circle cx="482" cy="169" r="1.6"/><circle cx="544" cy="167" r="1.3"/><circle cx="246" cy="210" r="1.4"/><circle cx="380" cy="208" r="1.6"/><circle cx="515" cy="212" r="1.4"/><circle cx="255" cy="262" r="1.5"/><circle cx="395" cy="262" r="1.6"/><circle cx="520" cy="260" r="1.4"/></g>
+        <g fill="#f4e4ac" opacity="0.6"><circle cx="215" cy="140" r="1.3"/><circle cx="330" cy="138" r="1.5"/><circle cx="455" cy="140" r="1.3"/><circle cx="520" cy="142" r="1.4"/><circle cx="300" cy="190" r="1.4"/><circle cx="400" cy="182" r="1.3"/><circle cx="455" cy="192" r="1.5"/><circle cx="320" cy="214" r="1.3"/><circle cx="430" cy="214" r="1.4"/><circle cx="285" cy="236" r="1.3"/><circle cx="420" cy="236" r="1.5"/><circle cx="310" cy="206" r="1.2"/><circle cx="450" cy="208" r="1.4"/><circle cx="325" cy="264" r="1.3"/><circle cx="465" cy="264" r="1.4"/></g>
+      </g>
+      </g>
+    </g>
+
+    <!-- the wave: rolls up the beach, then draws back -->
+    <g transform="translate(0,480)">
+      <animateTransform attributeName="transform" type="translate" values="0 480;0 480;0 -48;0 -48;0 480;0 480" keyTimes="0;0.2;0.42;0.48;0.96;1" dur="4.2s" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.2 0.55 0.2 1;0 0 1 1;0.4 0 0.45 1;0 0 1 1"/>
+      <path d="M-40,12 Q110,-14 290,8 Q400,20 520,6 Q640,-6 800,8 L800,720 L-40,720 Z" fill="url(#wetfilm)"/>
+      <path d="M-60,50 q40,-6 80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0" fill="none" stroke="#eafff4" stroke-width="2.4" stroke-linecap="round" opacity="0.5"><animateTransform attributeName="transform" type="translate" values="0 0;11 0;0 0" dur="5.4s" repeatCount="indefinite"/></path>
+      <path d="M-40,84 q46,7 92,0 t92,0 t92,0 t92,0 t92,0 t92,0 t92,0 t92,0 t92,0" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.32"><animateTransform attributeName="transform" type="translate" values="0 0;-9 0;0 0" dur="6.6s" repeatCount="indefinite"/></path>
+      <path d="M-40,26 Q140,6 300,22 Q430,32 560,18 Q660,8 800,20" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.32"/>
+      <path d="M-40,12 Q110,-14 290,8 Q400,20 520,6 Q640,-6 800,8" fill="none" stroke="#eef9f5" stroke-width="14" stroke-linecap="round" opacity="0.4"/>
+      <path d="M-40,12 Q110,-14 290,8 Q400,20 520,6 Q640,-6 800,8" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
+      <g fill="#ffffff" opacity="0.8"><circle cx="40" cy="10" r="3"/><circle cx="118" cy="1" r="2.2"/><circle cx="206" cy="12" r="3.3"/><circle cx="286" cy="9" r="2.4"/><circle cx="360" cy="17" r="3"/><circle cx="436" cy="12" r="2.3"/><circle cx="520" cy="7" r="3.2"/><circle cx="602" cy="2" r="2.4"/><circle cx="676" cy="9" r="3"/><circle cx="744" cy="6" r="2.2"/></g>
+    </g>
+    </g>
+  </svg>
+  <div class="scap">the tide's rolling in…</div>
+</div>
+<script>(function(){var s=document.getElementById('splash');if(!s)return;
+var sc=document.getElementById('scion'),showScion=function(){if(sc){sc.style.transition='opacity .3s ease';sc.style.opacity='1';}};try{document.fonts.load("32px 'Gloria Hallelujah'").then(showScion,showScion);}catch(_){}setTimeout(showScion,1000);
+var gone=false,kill=function(){if(gone)return;gone=true;s.style.transition='opacity .35s ease';s.style.opacity='0';setTimeout(function(){s.style.display='none';},360);};s.addEventListener('click',kill);setTimeout(function(){s.style.display='none';},4300);})();</script>
+<div class="bg"></div>
+<div class="bg-grain"></div>
+
+<header>
+  <div class="border-strip" id="strip-top"></div>
+  <div class="topbar"><div class="wordmark" aria-label="Hacker House Goa"><span class="hh">HACKER</span><span class="goa">गोवा</span><span class="hh">HOUSE</span></div></div>
+  <div class="tagline">Builder residency · <b>Goa · Oct 28–31 2026</b> · #FrameInGoa</div>
+  <div class="border-strip tall" id="strip-fancy" style="margin-top:14px"></div>
+</header>
+
+<section class="hero">
+  <div class="eyebrow">Your ticket to Goa</div>
+  <h1>Mint your <span class="y">Builder Pass</span>.</h1>
+  <p>Upload a photo, add your details, and get a share-ready Hacker House Goa 2026 pass.</p>
+</section>
+
+<main class="studio">
+  <div class="panel">
+    <div class="panel-head">
+      <div><h2>Builder Pass Studio</h2><div class="step">Upload → Fill → Download → Share</div></div>
+      <div class="badge-official"><span class="d"></span> ✈️ HH · GOA · BOARDING PASS</div>
+    </div>
+    <div class="grid">
+      <div class="controls">
+        <div class="dropzone" id="drop" tabindex="0" role="button" aria-label="Upload a photo">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+          <h3 id="drop-title">Upload your photo</h3>
+          <p>Tap to choose, drag &amp; drop, or use your camera</p>
+          <small>JPG · PNG · HEIC (iPhone) · WEBP — any crop works</small>
+          <input type="file" id="file" accept="image/*,.heic,.heif" capture="user" class="sr-only" />
+        </div>
+        <div class="slider"><label for="zoom" id="zoom-label">Zoom</label><input type="range" id="zoom" min="1" max="3" step="0.01" value="1" /></div>
+        <div class="drag-note">✋ drag the photo in the preview to move it · use Zoom to resize</div>
+        <div class="field"><label for="f-name">Full name</label><input id="f-name" type="text" maxlength="22" placeholder="e.g. Madhavan Singh" autocomplete="name" /></div>
+        <div class="row2">
+          <div class="field"><label for="f-role">Role <span class="muted">(type or pick)</span></label><input id="f-role" list="role-list" type="text" maxlength="24" value="Full Stack Developer" placeholder="e.g. ML Engineer" /><datalist id="role-list"><option>Full Stack Developer</option><option>Frontend Dev</option><option>Backend Dev</option><option>ML Engineer</option><option>Designer</option><option>Founder</option><option>Ethical Hacker</option><option>Smart Contract Dev</option><option>Mobile Dev</option><option>DevOps</option></datalist></div>
+          <div class="field"><label for="f-team">Team <span class="muted">(optional)</span></label><input id="f-team" type="text" maxlength="16" placeholder="e.g. RootCritics" /></div>
+        </div>
+        <div class="row2">
+          <div class="field"><label for="f-city">From (city)</label><input id="f-city" type="text" maxlength="14" placeholder="e.g. Pune" /></div>
+          <div class="field"><label for="f-handle">X handle <span class="muted">(links QR)</span></label><input id="f-handle" type="text" maxlength="16" placeholder="@handle" /></div>
+        </div>
+        <div class="field"><label>Builder class <span class="muted">(nickname — type or shuffle 🎲)</span></label>
+          <div class="title-box"><input class="tt" id="f-class" type="text" maxlength="22" value="Susegad Shipper" list="class-list" placeholder="e.g. Terminal Wizard" />
+            <button id="shuffle" title="Shuffle nickname" aria-label="Shuffle builder class"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg></button>
+          </div>
+          <datalist id="class-list"><option>Terminal Wizard</option><option>Susegad Shipper</option><option>Regex Sorcerer</option><option>Prompt Alchemist</option><option>Chain Whisperer</option><option>Latency Slayer</option><option>Vibe Architect</option><option>Feni-Fueled Hacker</option></datalist>
+        </div>
+      </div>
+      <div class="preview">
+        <div class="stage" id="stage">
+          <div class="empty" id="empty">Your Builder Pass<br>appears here<br><small style="font-size:11px">upload a photo to start</small></div>
+          <canvas id="canvas" width="1500" height="946" style="display:none"></canvas>
+          <div class="photo-hint">drag to reposition · zoom above</div>
+        </div>
+        <div class="actions">
+          <button class="btn btn-dl" id="download" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</button>
+          <button class="btn btn-x" id="share" disabled><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2H21.5l-7.5 8.57L23 22h-6.9l-5.4-7.06L4.5 22H1.24l8.02-9.17L1 2h7.06l4.88 6.45L18.244 2Zm-1.21 18h1.9L7.05 3.9H5.02L17.03 20Z"/></svg> Share to X</button>
+        </div>
+        <p class="share-hint">💻 <b>On laptop:</b> Share copies your photo &amp; opens X — click the post box and press <b>Ctrl / Cmd + V</b> to paste it, then Post.</p>
+      </div>
+    </div>
+  </div>
+  <div class="how">
+    <div class="card"><div class="n">1</div><h4>Upload</h4><p>Any photo — portrait, landscape, off-center. HEIC from iPhone works too.</p></div>
+    <div class="card"><div class="n">2</div><h4>Fill</h4><p>Add your name, role, team, city &amp; handle — they drop straight onto the pass.</p></div>
+    <div class="card"><div class="n">3</div><h4>Download</h4><p>Get a real high-res pass PNG — QR, seat &amp; builder no. baked in.</p></div>
+    <div class="card"><div class="n">4</div><h4>Share</h4><p>One tap posts to X with your pass and <b>#FrameInGoa</b> ready to go.</p></div>
+  </div>
+</main>
+
+<footer>
+  <div class="border-strip tall" id="strip-fancy2"></div>
+  <div class="foot-inner">
+    <div class="fx">Made for <b>Hacker House Goa 2026</b> · share it with <a href="#">#FrameInGoa</a></div>
+    <div class="scion"><span class="logo">SCION</span><span class="tag">TEAM · HH GOA 2026</span></div>
+    <div class="builders"><span class="lbl">BUILT BY</span><b>Jasim S</b> · <b>Chandra Sekarayyan</b> · <b>Ajin Joseph</b></div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"></script>
+<script>
+const C={green:'#14663a',greenDeep:'#0e4d2a',greenDark:'#0a3d21',green950:'#06301a',lime:'#8fcb4e',limeSoft:'#a9d96f',yellow:'#f4c400',yellowDeep:'#e6b400',magenta:'#e6198d',magentaDeep:'#c50f76',cream:'#fdfbf0',white:'#ffffff',teal:'#2bb3a3'};
+const DISP='"Bodoni Moda"',MONO='"Space Mono"';
+document.getElementById('strip-top').style.backgroundImage='url("border-simple.png")';
+document.getElementById('strip-fancy').style.backgroundImage='url("border-fancy.png")';
+document.getElementById('strip-fancy2').style.backgroundImage='url("border-fancy.png")';
+
+const state={raw:null,img:null,cutout:false,scale:1,offX:.5,offY:.5,mode:'board',name:'',role:'Full Stack Developer',team:'',handle:'',city:'',serial:'0427',klass:'Susegad Shipper'};
+const canvas=document.getElementById('canvas'),ctx=canvas.getContext('2d');
+const empty=document.getElementById('empty'),stage=document.getElementById('stage');
+const dlBtn=document.getElementById('download'),shareBtn=document.getElementById('share');
+let fontsReady=false;const assets={bf:null,bs:null};
+
+function hh(s){let h=2166136261;for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619);}return Math.abs(h);}
+function serialFor(s){return String(hh(s||'goa')%9000+1000);}
+function wallet(s){const h=(hh(s)>>>0).toString(16).toUpperCase();return('0000000'+h).slice(-8);}
+const ADJ=['Susegad','Midnight','Caffeinated','Feni-Fueled','Sun-Kissed','Terminal','Recursive','Serverless','Beachside','Zero-Bug','Async','Overclocked','Regex','Chai-Powered','Vibe','Prod-Ready','Neon','Coastal'];
+const NOUN=['Shipper','Wizard','Nomad','Alchemist','Sorcerer','Architect','Maverick','Voyager','Builder','Slayer','Pilot','Renegade','Maestro','Prototyper','Legend','Hacker'];
+function genClass(seed){const x=hh((seed||'')+'|'+Math.floor(Math.random()*1e9));return ADJ[x%ADJ.length]+' '+NOUN[(x>>5)%NOUN.length];}
+function refCode(seed){return 'HHGOA'+('0000'+(hh(seed)>>>0).toString(36).toUpperCase()).slice(-4);}
+
+/* upload */
+const fileInput=document.getElementById('file'),drop=document.getElementById('drop');
+drop.addEventListener('click',()=>fileInput.click());
+drop.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();fileInput.click();}});
+['dragenter','dragover'].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.add('drag');}));
+['dragleave','drop'].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.remove('drag');}));
+drop.addEventListener('drop',e=>{if(e.dataTransfer.files[0])handleFile(e.dataTransfer.files[0]);});
+fileInput.addEventListener('change',e=>{if(e.target.files[0])handleFile(e.target.files[0]);});
+let heicLoading=null;
+function loadHeic(){if(window.heic2any)return Promise.resolve();if(heicLoading)return heicLoading;heicLoading=new Promise((res,rej)=>{const s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js';s.onload=res;s.onerror=rej;document.head.appendChild(s);});return heicLoading;}
+async function handleFile(file){try{toast('Reading your photo…');let blob=file;if(/heic|heif/i.test(file.type)||/\.(heic|heif)$/i.test(file.name)){toast('Converting iPhone HEIC…');await loadHeic();blob=await window.heic2any({blob:file,toType:'image/jpeg',quality:.92});}const url=URL.createObjectURL(blob),img=new Image();img.onload=()=>{URL.revokeObjectURL(url);state.raw=img;applyPhoto();dlBtn.disabled=false;shareBtn.disabled=false;stage.classList.add('has-photo');document.getElementById('drop-title').textContent='Photo loaded ✓ — tap to change';};img.onerror=()=>toast('Could not read that image — try JPG or PNG');img.src=url;}catch(e){console.error(e);toast('That photo failed — try JPG/PNG.');}}
+function applyPhoto(){
+  state.scale=1;state.offX=.5;state.offY=.5;document.getElementById('zoom').value=1;
+  state.img=state.raw;state.cutout=false;render();toast('Looking good! Drag the photo to reposition · Zoom to resize');
+}
+/* ---- passport background removal: edge flood-fill chroma key + crop ---- */
+function removeBg(img){
+  const md=640,sc=md/Math.max(img.width,img.height),w=Math.max(1,Math.round(img.width*sc)),h=Math.max(1,Math.round(img.height*sc));
+  const cv=document.createElement('canvas');cv.width=w;cv.height=h;const c=cv.getContext('2d');c.drawImage(img,0,0,w,h);
+  const id=c.getImageData(0,0,w,h),d=id.data,N=w*h;
+  const px=(x,y)=>{const i=(y*w+x)*4;return[d[i],d[i+1],d[i+2]];};
+  const samp=[];for(let k=0;k<10;k++){samp.push(px(2+k,2),px(w-3-k,2),px(2+k,h-3),px(w-3-k,h-3));}
+  const bg=[0,1,2].map(j=>Math.round(samp.reduce((a,s)=>a+s[j],0)/samp.length));
+  const dist=i=>{const p=i*4,dr=d[p]-bg[0],dg=d[p+1]-bg[1],db=d[p+2]-bg[2];return Math.sqrt(dr*dr+dg*dg+db*db);};
+  const thr=52,soft=88;
+  const vis=new Uint8Array(N),st=new Int32Array(N);let sp=0;
+  for(let x=0;x<w;x++){st[sp++]=x;st[sp++]=(h-1)*w+x;}
+  for(let y=0;y<h;y++){st[sp++]=y*w;st[sp++]=y*w+w-1;}
+  const stack=Array.from(st.slice(0,sp));
+  while(stack.length){const idx=stack.pop();if(vis[idx])continue;vis[idx]=1;const dd=dist(idx);if(dd>thr)continue;d[idx*4+3]=0;const x=idx%w,y=(idx/w)|0;if(x>0)stack.push(idx-1);if(x<w-1)stack.push(idx+1);if(y>0)stack.push(idx-w);if(y<h-1)stack.push(idx+w);}
+  // feather: soften subject pixels close to bg colour that touch a removed pixel
+  for(let y=1;y<h-1;y++)for(let x=1;x<w-1;x++){const i=y*w+x;if(d[i*4+3]===0)continue;if(d[(i-1)*4+3]===0||d[(i+1)*4+3]===0||d[(i-w)*4+3]===0||d[(i+w)*4+3]===0){const dd=dist(i);if(dd<soft)d[i*4+3]=Math.max(0,Math.min(255,Math.round(255*(dd-thr)/(soft-thr))));}}
+  c.putImageData(id,0,0);
+  // crop to subject bbox
+  let mnx=w,mny=h,mxx=0,mxy=0,any=false;
+  for(let y=0;y<h;y++)for(let x=0;x<w;x++){if(d[(y*w+x)*4+3]>18){any=true;if(x<mnx)mnx=x;if(x>mxx)mxx=x;if(y<mny)mny=y;if(y>mxy)mxy=y;}}
+  if(!any)return img;
+  const bw=mxx-mnx+1,bh=mxy-mny+1,pad=Math.round(Math.max(bw,bh)*0.07);
+  const out=document.createElement('canvas');out.width=bw+pad*2;out.height=bh+pad*2;out.getContext('2d').drawImage(cv,mnx,mny,bw,bh,pad,pad,bw,bh);
+  return out;
+}
+
+/* inputs */
+const g=id=>document.getElementById(id);
+g('f-name').addEventListener('input',e=>{state.name=e.target.value;state.serial=serialFor(state.name+state.handle);render();});
+g('f-role').addEventListener('input',e=>{state.role=e.target.value;render();});
+g('f-class').addEventListener('input',e=>{state.klass=e.target.value;render();});
+g('shuffle').addEventListener('click',()=>{state.klass=genClass(state.name+state.role);g('f-class').value=state.klass;render();});
+g('f-team').addEventListener('input',e=>{state.team=e.target.value;render();});
+g('f-city').addEventListener('input',e=>{state.city=e.target.value;render();});
+g('f-handle').addEventListener('input',e=>{state.handle=e.target.value;state.serial=serialFor(state.name+state.handle);render();});
+g('zoom').addEventListener('input',e=>{state.scale=parseFloat(e.target.value);render();});
+let dragging=false,last=null;
+function pt(e){const r=canvas.getBoundingClientRect(),t=e.touches?e.touches[0]:e;return{x:(t.clientX-r.left)/r.width,y:(t.clientY-r.top)/r.height};}
+canvas.addEventListener('pointerdown',e=>{if(!state.img)return;dragging=true;last=pt(e);canvas.setPointerCapture(e.pointerId);});
+canvas.addEventListener('pointermove',e=>{if(!dragging||!state.img)return;const p=pt(e);state.offX=Math.min(1,Math.max(0,state.offX-(p.x-last.x)));state.offY=Math.min(1,Math.max(0,state.offY-(p.y-last.y)));last=p;render();});
+['pointerup','pointercancel'].forEach(ev=>canvas.addEventListener(ev,()=>dragging=false));
+
+/* boarding pass only */
+
+/* ---------- draw helpers ---------- */
+function roundRect(c,x,y,w,h,r){if(typeof r==='number')r={tl:r,tr:r,br:r,bl:r};c.beginPath();c.moveTo(x+r.tl,y);c.lineTo(x+w-r.tr,y);c.arcTo(x+w,y,x+w,y+r.tr,r.tr);c.lineTo(x+w,y+h-r.br);c.arcTo(x+w,y+h,x+w-r.br,y+h,r.br);c.lineTo(x+r.bl,y+h);c.arcTo(x,y+h,x,y+h-r.bl,r.bl);c.lineTo(x,y+r.tl);c.arcTo(x,y,x+r.tl,y,r.tl);c.closePath();}
+function fit(c,t,mw,s,f,w,min){let z=s;do{c.font=w+' '+z+'px '+f;if(c.measureText(t).width<=mw)break;z-=2;}while(z>(min||12));return z;}
+function shOn(c){c.shadowColor='rgba(10,61,33,.5)';c.shadowOffsetX=2;c.shadowOffsetY=3;c.shadowBlur=0;}
+function shOff(c){c.shadowColor='transparent';c.shadowOffsetX=0;c.shadowOffsetY=0;c.shadowBlur=0;}
+function drawGoa(c,cx,cy,size,rot,stroke){c.save();c.translate(cx,cy);c.rotate(rot||0);c.font='800 '+size+'px "Baloo 2"';c.textAlign='center';c.textBaseline='middle';c.lineJoin='round';c.miterLimit=2;c.strokeStyle=stroke||C.magenta;c.lineWidth=size*0.16;c.strokeText('गोवा',0,1);c.fillStyle=C.yellow;c.fillText('गोवा',0,1);c.restore();}
+function drawWM(c,x,cy,size,goaSize,col,align){c.save();c.textBaseline='alphabetic';c.font='700 '+size+'px '+DISP;const hw=c.measureText('HACKER').width,fw=c.measureText('HACKERHOUSE').width;const left=align==='left'?x:x-fw/2;shOn(c);c.fillStyle=col||C.yellow;c.save();c.translate(left,cy);c.scale(1,1.3);c.textAlign='left';c.fillText('HACKERHOUSE',0,0);c.restore();shOff(c);drawGoa(c,left+hw,cy-size*0.42,goaSize||size*0.82,-0.05);c.restore();}
+function coverInto(c,img,x,y,w,h){const ir=img.width/img.height,tr=w/h;let dw,dh;if(ir>tr){dh=h*state.scale;dw=dh*ir;}else{dw=w*state.scale;dh=dw/ir;}c.drawImage(img,x+(w-dw)*state.offX,y+(h-dh)*state.offY,dw,dh);}
+function containInto(c,img,x,y,w,h){const ir=img.width/img.height,tr=w/h;let dw,dh;if(ir>tr){dw=w*state.scale;dh=dw/ir;}else{dh=h*state.scale;dw=dh*ir;}c.drawImage(img,x+(w-dw)*state.offX,y+(h-dh)*state.offY,dw,dh);}
+function photo(c,x,y,w,h,rad,mode){c.save();roundRect(c,x,y,w,h,rad);c.clip();
+  if(state.cutout){if(mode==='split'){c.fillStyle=C.yellow;c.fillRect(x,y,w/2,h);c.fillStyle=C.magenta;c.fillRect(x+w/2,y,w/2,h);}else{const gg=c.createLinearGradient(x,y,x,y+h);gg.addColorStop(0,'#cfeaff');gg.addColorStop(1,'#ffe9c6');c.fillStyle=gg;c.fillRect(x,y,w,h);}if(state.img)containInto(c,state.img,x,y,w,h);}
+  else{if(state.img){if(mode==='split'){c.fillStyle=C.yellow;c.fillRect(x,y,w/2,h);c.fillStyle=C.magenta;c.fillRect(x+w/2,y,w/2,h);}coverInto(c,state.img,x,y,w,h);}else{c.fillStyle=C.greenDark;c.fillRect(x,y,w,h);c.fillStyle='rgba(255,255,255,.5)';c.font='600 26px '+MONO;c.textAlign='center';c.textBaseline='middle';c.fillText('your photo',x+w/2,y+h/2);}}
+  c.restore();}
+function tri(c,cx,cy,s,col,d){c.save();c.fillStyle=col;c.beginPath();if(d){c.moveTo(cx-s,cy-s);c.lineTo(cx+s,cy-s);c.lineTo(cx,cy+s);}else{c.moveTo(cx-s,cy+s);c.lineTo(cx+s,cy+s);c.lineTo(cx,cy-s);}c.closePath();c.fill();c.restore();}
+function flower8(c,cx,cy,r){c.save();c.translate(cx,cy);c.fillStyle=C.lime;for(let i=0;i<8;i++){c.rotate(Math.PI/4);c.beginPath();c.ellipse(0,-r*.62,r*.3,r*.56,0,0,7);c.fill();}c.fillStyle=C.limeSoft;c.beginPath();c.arc(0,0,r*.34,0,7);c.fill();c.restore();}
+function floral(c,x,y,w,h){c.save();c.beginPath();c.rect(x,y,w,h);c.clip();c.fillStyle=C.green;c.fillRect(x,y,w,h);const st=76,m=y+h/2;for(let cx=x+30;cx<x+w+st;cx+=st){flower8(c,cx,m,h*.36);}c.restore();}
+function bstrip(c,x,y,w,h){if(assets.bf){c.save();c.beginPath();c.rect(x,y,w,h);c.clip();c.drawImage(assets.bf,x,y,w,h);c.restore();}else floral(c,x,y,w,h);}
+function sunHalf(c,cx,cy,r,col){c.save();c.strokeStyle=col||C.yellow;c.lineWidth=4;c.lineCap='round';for(let i=0;i<9;i++){const a=Math.PI+(i/8)*Math.PI;c.beginPath();c.moveTo(cx+Math.cos(a)*(r+8),cy+Math.sin(a)*(r+8));c.lineTo(cx+Math.cos(a)*(r+22),cy+Math.sin(a)*(r+22));c.stroke();}c.fillStyle=col||C.yellow;c.beginPath();c.arc(cx,cy,r,Math.PI,0);c.fill();c.restore();}
+function palm(c,x,y,s,flip,col){c.save();c.translate(x,y);c.scale(flip?-s:s,s);c.strokeStyle=col;c.lineWidth=6;c.lineCap='round';c.beginPath();c.moveTo(0,0);c.bezierCurveTo(-4,-30,-6,-66,-2,-100);c.stroke();c.fillStyle=col;const fr=[[-36,-108,-58,-92],[30,-108,52,-92],[-22,-126,-6,-144],[20,-126,4,-144],[-46,-104,-64,-84],[44,-104,62,-84]];fr.forEach(f=>{c.beginPath();c.moveTo(-2,-100);c.quadraticCurveTo(f[0],f[1],f[2],f[3]);c.quadraticCurveTo(f[0]+6,f[1]+9,-2,-100);c.fill();});c.restore();}
+function qr(c,data,x,y,size,dark,bg){try{const q=qrcode(0,'M');q.addData(data);q.make();const n=q.getModuleCount(),pad=Math.round(size*.08),inner=size-pad*2,cell=inner/n;c.fillStyle=bg||C.cream;roundRect(c,x,y,size,size,10);c.fill();c.fillStyle=dark||C.greenDark;for(let r=0;r<n;r++)for(let col=0;col<n;col++)if(q.isDark(r,col))c.fillRect(x+pad+col*cell,y+pad+r*cell,Math.ceil(cell),Math.ceil(cell));}catch(e){c.fillStyle=bg||C.cream;roundRect(c,x,y,size,size,10);c.fill();}}
+function barcode(c,x,y,w,h,seed,col){c.save();let hx=hh(seed),cur=x;c.fillStyle=col||C.greenDark;while(cur<x+w){const bw=1+(hx&3);hx=Math.imul(hx,1103515245)+12345;hx>>>=0;const gp=1+((hx>>3)&3);if((hx>>2)&1)c.fillRect(cur,y,bw,h);cur+=bw+gp;}c.restore();}
+function field(c,x,y,label,val,labCol,valCol,valSize,valFont,maxW,labSize,weight){labSize=labSize||15;weight=weight||'700';c.textAlign='left';c.textBaseline='alphabetic';c.fillStyle=labCol;c.font='700 '+labSize+'px '+MONO;c.fillText(label,x,y);c.fillStyle=valCol;const vf=fit(c,val,maxW||300,valSize||30,valFont||DISP,weight,14);c.font=weight+' '+vf+'px '+(valFont||DISP);c.fillText(val,x,y+10+vf*0.82);}
+
+/* ================= BOARDING PASS (ID-card ratio) ================= */
+function renderBoard(){
+  const W=1500,H=946,nm=(state.name||'Your Name'),city=(state.city||'Pune'),code='#'+refCode(state.name+state.handle),role=(state.role||'').trim(),klass=(state.klass||'').trim();
+  ctx.clearRect(0,0,W,H);ctx.fillStyle=C.green950;ctx.fillRect(0,0,W,H);
+  const x0=26,y0=26,cw=W-52,chh=H-52,r=28;
+  ctx.save();ctx.shadowColor='rgba(0,0,0,.4)';ctx.shadowBlur=42;ctx.shadowOffsetY=18;ctx.fillStyle=C.green;roundRect(ctx,x0,y0,cw,chh,r);ctx.fill();ctx.restore();
+  ctx.save();roundRect(ctx,x0,y0,cw,chh,r);ctx.clip();ctx.fillStyle=C.green;ctx.fillRect(x0,y0,cw,chh);
+  const stubX=x0+cw-448;
+  const mpx=x0+22,mpy=y0+22,mpw=stubX-x0-40,mph=chh-44,mx=mpx+42;
+  ctx.fillStyle=C.cream;roundRect(ctx,mpx,mpy,mpw,mph,18);ctx.fill();
+  ctx.save();roundRect(ctx,mpx,mpy,mpw,mph,18);ctx.clip();
+  // faint beach art
+  ctx.save();ctx.globalAlpha=.09;ctx.fillStyle=C.yellowDeep;ctx.beginPath();ctx.arc(mpx+mpw-200,mpy+mph*0.46,80,Math.PI,0);ctx.fill();ctx.fillStyle=C.green;ctx.fillRect(mpx,mpy+mph*0.46,mpw,90);palm(ctx,mpx+84,mpy+mph+20,1.25,false,C.green);palm(ctx,mpx+mpw-74,mpy+mph+20,1.35,true,C.green);ctx.restore();
+  // header
+  ctx.font='700 48px '+DISP;const wmW=ctx.measureText('HACKERHOUSE').width;
+  drawWM(ctx,mx,y0+118,48,44,C.green,'left');
+  ctx.fillStyle=C.magenta;ctx.font='700 36px '+DISP;ctx.textAlign='left';ctx.fillText('AIR',mx+wmW+18,y0+118);
+  ctx.fillStyle=C.greenDark;ctx.font='700 22px '+MONO;ctx.textAlign='right';ctx.fillText('BOARDING PASS',mpx+mpw-36,y0+90);
+  sunHalf(ctx,mpx+mpw-274,y0+88,22,C.yellowDeep);
+  // route (huge)
+  const ry=y0+312;
+  ctx.fillStyle=C.greenDark;ctx.font='900 140px '+DISP;ctx.textAlign='left';ctx.fillText(city.slice(0,3).toUpperCase(),mx,ry);
+  ctx.textAlign='right';ctx.fillText('GOA',mpx+mpw-46,ry);
+  ctx.strokeStyle=C.magenta;ctx.lineWidth=6;ctx.setLineDash([17,12]);ctx.beginPath();ctx.moveTo(mx+400,ry-48);ctx.lineTo(mpx+mpw-350,ry-48);ctx.stroke();ctx.setLineDash([]);
+  ctx.fillStyle=C.magenta;ctx.save();ctx.translate(mpx+mpw-340,ry-48);ctx.beginPath();ctx.moveTo(0,-17);ctx.lineTo(32,0);ctx.lineTo(0,17);ctx.lineTo(9,0);ctx.closePath();ctx.fill();ctx.restore();
+  ctx.fillStyle='#6a8a70';ctx.font='700 22px '+MONO;ctx.textAlign='left';ctx.fillText(city.toUpperCase(),mx+6,ry+44);ctx.textAlign='right';ctx.fillText('GOA, INDIA',mpx+mpw-46,ry+44);
+  // "NOW BOARDING" ink stamp (authentic status detail)
+  ctx.save();ctx.translate(mpx+mpw-218,ry+112);ctx.rotate(-0.08);ctx.globalAlpha=.92;
+  ctx.strokeStyle=C.magenta;ctx.lineWidth=4;const sW=286,sH=96;roundRect(ctx,-sW/2,-sH/2,sW,sH,14);ctx.stroke();
+  ctx.lineWidth=2;roundRect(ctx,-sW/2+9,-sH/2+9,sW-18,sH-18,9);ctx.stroke();
+  ctx.fillStyle=C.magenta;ctx.textAlign='center';ctx.textBaseline='middle';
+  ctx.font='900 37px '+DISP;ctx.fillText('NOW BOARDING',0,-12);
+  ctx.font='700 15px '+MONO;ctx.fillText('GATE B26 · SEQ 042 · ZONE 1',0,23);
+  ctx.restore();
+  // passenger (big) + role + builder-class nickname
+  field(ctx,mx,ry+150,'PASSENGER',nm.toUpperCase(),C.magenta,C.greenDark,58,DISP,mpw-100,20,'800');
+  if(role){ctx.textAlign='left';ctx.textBaseline='alphabetic';ctx.fillStyle=C.magenta;const rfs=fit(ctx,role,mpw-340,36,DISP,'800',20);ctx.font='800 '+rfs+'px '+DISP;ctx.fillText(role,mx,ry+264);}
+  // fields 4 x 2 (big)
+  const fg=(mpw-84)/4,fyy=ry+330;
+  [['FLIGHT','HH-GOA-26'],['SEAT','34A'],['BOARDING','09:41 AM'],['CLASS','BUILDER']].forEach((f,i)=>field(ctx,mx+fg*i,fyy,f[0],f[1],C.magenta,C.greenDark,42,MONO,fg-18,19,'700'));
+  field(ctx,mx,fyy+120,'DATE','28–31 OCT',C.magenta,C.greenDark,42,MONO,fg-18,19,'700');
+  field(ctx,mx+fg,fyy+120,'TEAM',(state.team||'INDEPENDENT').toUpperCase(),C.magenta,C.greenDark,42,MONO,fg*3-30,19,'700');
+  // bottom line
+  ctx.fillStyle='#6a8a70';ctx.font='700 19px '+MONO;ctx.textAlign='left';ctx.fillText('REF '+code+'  ·  HACKER HOUSE GOA 2026',mx,mpy+mph-34);ctx.textAlign='right';ctx.fillStyle=C.magenta;ctx.fillText('#FRAMEINGOA',mpx+mpw-42,mpy+mph-34);
+  ctx.restore();
+  // perforation + stub
+  ctx.save();ctx.setLineDash([10,10]);ctx.strokeStyle='rgba(253,251,240,.5)';ctx.lineWidth=3;ctx.beginPath();ctx.moveTo(stubX,y0+12);ctx.lineTo(stubX,y0+chh-12);ctx.stroke();ctx.restore();
+  ctx.fillStyle=C.green950;ctx.beginPath();ctx.arc(stubX,y0+2,22,0,7);ctx.arc(stubX,y0+chh-2,22,0,7);ctx.fill();
+  const sx=stubX+46;
+  ctx.fillStyle=C.yellow;ctx.font='700 22px '+MONO;ctx.textAlign='left';ctx.fillText('BOARDING PASS',sx,y0+82);
+  // big photo (centred in stub)
+  const pw=280,ph=336,ppx=stubX+(448-pw)/2,ppy=y0+112;
+  ctx.fillStyle=C.greenDark;roundRect(ctx,ppx-7,ppy-7,pw+14,ph+14,14);ctx.fill();
+  photo(ctx,ppx,ppy,pw,ph,10,'plain');
+  ctx.strokeStyle=C.yellow;ctx.lineWidth=3;roundRect(ctx,ppx,ppy,pw,ph,10);ctx.stroke();
+  // builder-class nickname pill (right side, under the photo)
+  if(klass){ctx.font='700 17px '+MONO;const kw=Math.min(ctx.measureText(klass.toUpperCase()).width+40,432),kcx=ppx+pw/2;ctx.fillStyle=C.magenta;roundRect(ctx,kcx-kw/2,ppy+ph+12,kw,32,16);ctx.fill();ctx.fillStyle=C.cream;ctx.textAlign='center';ctx.textBaseline='middle';const kf=fit(ctx,klass.toUpperCase(),kw-28,17,MONO,'700',11);ctx.font='700 '+kf+'px '+MONO;ctx.fillText(klass.toUpperCase(),kcx,ppy+ph+29);}
+  const by=ppy+ph+62;
+  ctx.fillStyle=C.cream;ctx.font='700 18px '+MONO;ctx.textAlign='left';ctx.fillText('PASSENGER',sx,by);
+  ctx.font='700 42px '+DISP;ctx.fillText(nm.split(' ')[0].toUpperCase(),sx,by+46);
+  ctx.fillStyle=C.limeSoft;ctx.font='700 16px '+MONO;ctx.fillText('FLIGHT HH-GOA-26 · SEAT 34A',sx,by+86);ctx.fillText('GATE B26 · CLASS BUILDER',sx,by+112);
+  qr(ctx,'https://x.com/'+(state.handle||'builder').replace(/^@/,''),sx,by+134,150,C.greenDark,C.cream);
+  ctx.fillStyle=C.limeSoft;ctx.font='700 15px '+MONO;ctx.fillText('SCAN → GM',sx+168,by+190);ctx.fillText('@'+(state.handle||'builder').replace(/^@/,''),sx+168,by+214);
+  barcode(ctx,sx,y0+chh-92,356,50,'BP'+state.serial,C.cream);
+  ctx.fillStyle='#8fb894';ctx.font='700 13px '+MONO;ctx.fillText('REF '+code+' · #FRAMEINGOA',sx,y0+chh-20);
+  ctx.restore();
+  ctx.strokeStyle=C.yellow;ctx.lineWidth=3;roundRect(ctx,x0+2,y0+2,cw-4,chh-4,r-2);ctx.stroke();
+}
+
+/* (Rail Pass removed — Boarding Pass only) */
+
+function render(){if(!fontsReady){requestAnimationFrame(render);return;}empty.style.display='none';canvas.style.display='block';renderBoard();}
+
+/* download + share */
+function filename(){const nm=state.name?'-'+state.name.trim().toLowerCase().replace(/[^a-z0-9]+/g,'-'):'';return 'hackerhouse-goa-boarding-pass'+nm+'.png';}
+function toBlob(){return new Promise(r=>canvas.toBlob(r,'image/png',.95));}
+dlBtn.addEventListener('click',async()=>{if(!state.img){toast('Upload a photo first');return;}const b=await toBlob();const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=filename();document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),1000);toast('Saved! 📥 Now hit <b>Share to X</b>');});
+/* ============================================================
+   👇 PASTE YOUR LIVE SITE LINK HERE (after you host the site),
+   between the quotes — e.g. "https://your-site.netlify.app"
+   ============================================================ */
+const SHARE_LINK = "";
+/* ============================================================ */
+const CAP=()=>`✈️ I’M ON BOARD FOR HACKER HOUSE GOA. 🌴
+Ready to build, break, experiment, and make something worth remembering.
+
+BUILD YOUR BUILDER ID CARD. 🔗 ${SHARE_LINK}
+#frameingoa`;
+shareBtn.addEventListener('click',async()=>{
+  if(!state.img){toast('Upload a photo first');return;}
+  const text=CAP();
+  const isMobile=/Android|iPhone|iPad|iPod|Mobile|Silk/i.test(navigator.userAgent)||(matchMedia('(pointer:coarse)').matches&&(navigator.maxTouchPoints||0)>1);
+  // Mobile ONLY: native share sheet attaches the photo straight to the X app. Desktop always uses the X composer below.
+  let canFiles=false;try{canFiles=isMobile&&!!(navigator.canShare&&navigator.canShare({files:[new File([new Uint8Array(1)],'p.png',{type:'image/png'})]}));}catch(e){}
+  if(canFiles){
+    const b=await toBlob();
+    try{await navigator.share({files:[new File([b],filename(),{type:'image/png'})],text});toast('Shared! 🎉 Post it with #FrameInGoa');return;}
+    catch(e){if(e.name==='AbortError')return;}
+  }
+  // Desktop/laptop: copy the photo to the clipboard FIRST (while the page is focused), save a backup, then open X.
+  const durl=canvas.toDataURL('image/png');
+  let copied=false;
+  try{
+    const bin=atob(durl.split(',')[1]);const arr=new Uint8Array(bin.length);for(let i=0;i<bin.length;i++)arr[i]=bin.charCodeAt(i);
+    const blob=new Blob([arr],{type:'image/png'});
+    if(navigator.clipboard&&window.ClipboardItem){await navigator.clipboard.write([new ClipboardItem({'image/png':blob})]);copied=true;}
+  }catch(e){}
+  const a=document.createElement('a');a.href=durl;a.download=filename();document.body.appendChild(a);a.click();a.remove();
+  const xa=document.createElement('a');xa.href='https://x.com/intent/tweet?text='+encodeURIComponent(text);xa.target='_blank';xa.rel='noopener';document.body.appendChild(xa);xa.click();xa.remove();
+  toast(copied?'✅ Photo COPIED! In the X post, press <b>Ctrl / Cmd&nbsp;+&nbsp;V</b> to paste it, then Post.':'📥 Photo saved. In X, click the <b>image icon</b> and pick it, then Post.',7000);
+});
+
+let toastT=null;function toast(m,dur){const t=document.getElementById('toast');t.innerHTML=m;t.classList.add('show');clearTimeout(toastT);toastT=setTimeout(()=>t.classList.remove('show'),dur||3200);}
+
+function load(names){return new Promise(res=>{let i=0;const go=()=>{if(i>=names.length)return res(null);const im=new Image();im.onload=()=>res(im);im.onerror=()=>{i++;go();};im.src=names[i];};go();});}
+state.serial=serialFor('goa');state.klass=genClass('goa');g('f-class').value=state.klass;
+const need=['700 76px '+DISP,'900 92px '+DISP,'700 34px '+DISP,'700 17px '+MONO,'800 44px "Baloo 2"'];
+function boot(){fontsReady=true;render();}
+Promise.all([...need.map(f=>document.fonts.load(f)),load(['border-fancy.png']).then(im=>{assets.bf=im;}),load(['border-simple.png']).then(im=>{assets.bs=im;})]).then(()=>document.fonts.ready).then(boot).catch(boot);
+setTimeout(()=>{if(!fontsReady)boot();},2500);
+</script>
+</body>
+</html>
